@@ -30,23 +30,23 @@ func (sdc *SDC) ConvertToHeader() *requests.Header {
 		PayerFinInstAccountName:        data.PayerFinInstAccountName,
 		PayerFinInstName:               data.PayerFinInstName,
 		PayerFinInstBranchName:         data.PayerFinInstBranchName,
-		PaymentApplicantCode:           data.PaymentApplicantCode,
-		CreationDateTime:               data.CreationDateTime,
-		ChangedOnDateTime:              data.ChangedOnDateTime,
+		// PaymentApplicantCode:           data.PaymentApplicantCode,
+		CreationDateTime:  data.CreationDateTime,
+		ChangedOnDateTime: data.ChangedOnDateTime,
 	}
 }
 
-func (sdc *SDC) ConvertToHeaderPDF() *requests.HeaderPDF {
-	dataPaymentRequisition := sdc.PaymentRequisition
+func (sdc *SDC) ConvertToHeaderDoc() *requests.HeaderPDF {
+	// dataPaymentRequisition := sdc.PaymentRequisition
 	data := sdc.PaymentRequisition.HeaderPDF
 	return &requests.HeaderPDF{
-		BusinessPartner:      dataPaymentRequisition.Payer,
-		PaymentDate:          dataPaymentRequisition.PayerPaymentDate,
-		PaymentRequisitionID: dataPaymentRequisition.PayerPaymentRequisitionID,
-		DocType:              data.DocType,
-		DocVersionID:         data.DocVersionID,
-		DocID:                data.DocID,
-		FileName:             data.FileName,
+		// BusinessPartner:      dataPaymentRequisition.Payer,
+		// PaymentDate:          dataPaymentRequisition.PayerPaymentDate,
+		// PaymentRequisitionID: dataPaymentRequisition.PayerPaymentRequisitionID,
+		DocType:      data.DocType,
+		DocVersionID: data.DocVersionID,
+		DocID:        data.DocID,
+		FileName:     data.FileName,
 	}
 }
 

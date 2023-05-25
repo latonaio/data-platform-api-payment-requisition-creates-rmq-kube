@@ -1,32 +1,66 @@
 {
-	"connection_key": "request",
-	"result": true,
-	"redis_key": "abcdefg",
-	"filepath": "/var/lib/aion/Data/rededge_sdc/abcdef.json",
-	"api_status_code": 200,
-	"runtime_session_id": "boi9ar543dg91ipdnspi099u231280ab0v8af0ew",
-	"business_partner": 201,
-	"service_label": "PARTNER_FUNCTION",
-	"PartnerFunction": {
-		"PartnerFunction": "TEST",
-		"PartnerFunctionText": {
-			"PartnerFunction": "TEST",
-			"Language": "JA",
-			"PartnerFunctionName": "テストネーム"
-		}
-	},
-	"api_schema": "DPFMPartnerFunctionCreates",
-	"accepter": [
-		"PartnerFunction"
-	],
-	"order_id": null,
-	"deleted": false,
-	"sql_update_result": true,
-	"sql_update_error": "",
-	"subfunc_result": null,
-	"subfunc_error": "",
-	"exconf_result": null,
-	"exconf_error": "",
-	"api_processing_result": true,
-	"api_processing_error": ""
+    "connection_key": "request",
+    "result": true,
+    "redis_key": "abcdefg",
+    "filepath": "/var/lib/aion/Data/rededge_sdc/abcdef.json",
+    "api_status_code": 200,
+    "runtime_session_id": "boi9ar543dg91ipdnspi099u231280ab0v8af0ew",
+    "business_partner": 201,
+    "service_label": "PAYMENT_REQUISITION",
+    "api_type": "creates",
+    "message": {
+        "Header": {
+            "PayerPaymentRequisitionID": 100000001,
+            "Payer": 0,
+            "PayerPaymentDate": "",
+            "PaymentReqnStatus": "",
+            "AcceptanceNoByFinInst": "",
+            "PaytReqnAmtInTransCrcy": 0,
+            "Currency": "",
+            "PaymentMethod": "",
+            "PayerPostingDate": "",
+            "PayerHouseBank": "",
+            "PayerHouseBankAccount": "",
+            "PayerFinInstCountry": "",
+            "PayerFinInstCode": "",
+            "PayerFinInstBranchCode": "",
+            "PayerFinInstFullCode": "",
+            "PayerFinInstSWIFTCode": "",
+            "PayerInternalFinInstCustomerID": 0,
+            "PayerInternalFinInstAccountID": 0,
+            "PayerFinInstControlKey": "",
+            "PayerFinInstAccount": "",
+            "PayerFinInstAccountName": "",
+            "PayerFinInstName": "",
+            "PayerFinInstBranchName": "",
+            "PayerFinInstCustomerIDByFinInst": "",
+            "PaymentRequisitionIsCanceled": null,
+            "CreationDateTime": "",
+            "ChangedOnDateTime": "",
+            "HeaderDoc": null,
+            "Item": null
+        },
+        "HeaderDoc": null,
+        "Item": null
+    },
+    "api_schema": "DPFMPaymentRequisitionCreates",
+    "accepter": [
+        "Header"
+    ],
+    "deleted": false,
+    "sql_update_result": false,
+    "sql_update_error": "Header Data cannot insert",
+    "subfunc_result": true,
+    "subfunc_error": "",
+    "exconf_result": true,
+    "exconf_error": "",
+    "api_processing_result": true,
+    "api_processing_error": ""
+}
+{
+    "cursor": "/Users/latona/dev/data-platform-api-payment-requisition-creates-rmq-kube/main.go#L46",
+    "function": "main.main",
+    "level": "INFO",
+    "message": "process time 663\n",
+    "time": "2022-12-27T16:25:51+09:00"
 }

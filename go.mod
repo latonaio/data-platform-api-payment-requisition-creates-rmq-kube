@@ -1,6 +1,6 @@
 module data-platform-api-payment-requisition-creates-rmq-kube
 
-go 1.19
+go 1.20
 
 require (
 	github.com/latonaio/golang-logging-library-for-data-platform v1.0.2
